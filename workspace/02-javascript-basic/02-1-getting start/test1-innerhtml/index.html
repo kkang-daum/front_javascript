@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { text-align: center;}
+    #title { color: red;}
+  </style>
+</head>
+<body>
+  <h1 id="title">Hello Javascript</h1>
+  <button onclick="myButtonClick()">click me</button>
+  <script>
+    const myButtonClick = () => {
+      let title = document.getElementById('title')
+      if(title.style.backgroundColor === 'yellow'){
+        title.style.backgroundColor = 'pink'
+      }else {
+        title.style.backgroundColor = 'yellow'
+      }
+    }
+  </script>
+</body>
+</html>
