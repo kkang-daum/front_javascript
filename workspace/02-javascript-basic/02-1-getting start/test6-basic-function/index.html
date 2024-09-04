@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button onclick="dialogTest()">dialog test</button>
+  </div>
+  <script>
+    const dialogTest = () => {
+      // let result1 = alert('안녕하세요')
+      // console.log('alert result '+result1)//undefined
+
+      // let result2 = confirm('로그인 화면으로 이동하시겠어요?')
+      // console.log('confirm result '+result2)
+      // //최소 : confirm result false
+      // //확인 : confirm result true
+      // if(result2){
+      //   console.log('로그인으로 이동하겠습니다.')
+      // }else {
+      //   console.log('로그인으로 이동하지 않습니다.')
+      // }
+
+      let result3 = prompt('숫자를 입력해 주세요')
+      console.log('prompt result '+result3)
+      //취소 : prompt result null
+      //입력 없이 확인 : prompt result  : 빈 문자열
+      //입력하면 : prompt result aaa : 유저 입력 문자열이 반환
+    }
+  </script>
+
+  <div>
+    <button onclick="writeTest()">write test</button>
+  </div>
+  <script>
+    const writeTest = () => {
+      let name = prompt('이름을 입력해 주세요')
+      
+      document.write(
+        '<div>안녕하세요 <b style="color:blue;">'
+          + name +
+        '</b>님, 환영합니다. </div>'
+      )
+    }
+  </script>
+
+  <div>
+    <button onclick="consoleTest()">console test</button>
+  </div>
+  <script>
+    const consoleTest = () => {
+      console.log('첫번째 로그 출력입니다. ')
+      console.log('두번째 출력입니다.', '홍길동', '김길동', '이길동')
+      console.log('세번째 출력입니다.', 10, true)
+    }
+  </script>
+</body>
+</html>
