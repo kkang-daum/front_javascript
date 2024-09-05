@@ -19,3 +19,4 @@ let data4 = '20'
 console.log(data1 + data2)//30
 console.log(data3 + data4)//1020
 console.log(data1 + data3)//1010
+
