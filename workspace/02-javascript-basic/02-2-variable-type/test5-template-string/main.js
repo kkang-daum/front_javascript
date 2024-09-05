@@ -21,3 +21,9 @@ const calSum = (no) => {
 document.write(`
   안녕하세요 ${name}님, 함수 호출 결과는 ${calSum(10)}, ${10 + 20}
 `)
+
+//template string 의 ${}에는 expression code 만 가능하다.
+//아래처럼 statement 코드는 불가능 하다.
+// let a = `
+//   ${let data = 10}
+// `
