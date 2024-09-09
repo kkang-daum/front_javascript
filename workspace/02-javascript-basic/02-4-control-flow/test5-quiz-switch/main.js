@@ -27,5 +27,5 @@ const ifTest = () => {
 
 const switchTest = () => {
   //swtch - case 문으로 작성
- 
+  
 }
