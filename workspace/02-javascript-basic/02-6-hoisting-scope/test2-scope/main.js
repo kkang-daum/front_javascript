@@ -91,3 +91,11 @@ const someFun = () => {
 }
 someFun()
 console.log(`out someFun, name1 = ${name1}`)
+// in someFun 1, name1 = 김길동
+// in someFun, in for, name1 = 이길동
+// in someFun 2, name1 = 김길동
+// in someFun, in if, name1 = 박길동
+// in someFun 3, name1 = 김길동
+// out someFun, name1 = 홍길동
+
+//==>let 은 함수, for, if 스코프 지원한다. 
