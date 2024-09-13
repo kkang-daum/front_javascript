@@ -46,4 +46,4 @@ result = array.sort((data1, data2) => {
   else if(data1 == data2) return 0
   else return 1
 })
-console.log(result)
+console.log(result)//(5) [20, 15, 11, 5, 3]
