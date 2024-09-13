@@ -25,7 +25,7 @@ result = array.map((value ) => {
 })
 console.log(result)//(5) [22, 6, 40, 30, 10]
 
-//sort.. 정렬.. 내림차순 정렬.. 작은거 먼저.. 
+//sort.. 정렬.. 오름차순 정렬.. 작은거 먼저.. 
 //정렬 알로리즘은 개발자 알고리즘.. 함수로 매개변수 지정.. 
 //정렬을 하려면 두 데이터중 어느것이 큰지에 대한 판단이 있어야..
 //매개변수 두개.. 
@@ -40,7 +40,7 @@ result = array.sort((data1, data2) => {
 })
 console.log(result)//(5) [3, 5, 11, 15, 20]
 
-//오름차순.. 
+//내림차순.. 
 result = array.sort((data1, data2) => {
   if(data1 > data2) return -1
   else if(data1 == data2) return 0
