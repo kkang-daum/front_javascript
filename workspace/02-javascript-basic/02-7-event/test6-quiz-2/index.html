@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .errorMsg {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h3>로그인</h3>
+  ID : <input type="text" id="id" onblur="idValidCheck()"/><br/>
+  <div id="idErrorMsg" class="errorMsg"></div>
+  PW : <input type="password" id="pw" onblur="pwValidCheck()"/>
+  <div id="pwErrorMsg" class="errorMsg"></div>
+  <button id="loginBtn" onclick="login()">로그인</button>
+  <br/>
+  <div id="result"></div>
+  <script src="main.js"></script>
+</body>
+</html>
