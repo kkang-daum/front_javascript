@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function getMainData() {
+      //window.open() 에 의해 뜬 html 의 내장 객체.. opener.. 자신을 띄운 창을 지칭
+      console.log('child log', opener.mainData)
+      opener.mainFun()//ok.... 
+    }
+
+    //아래 변수, 함수는 부모 창에서 접근.. 
+    var childData = 20
+    function childFun() {
+      console.log('childFun call.... ')
+    }
+
+    //부모창에서 자식창을 접근하려면.. 먼저 자식창에서 
+    //자신을 부모창에서 이용하게 등록을 해주어야 한다.. 
+    //this - 예약어..(자기 자신을 지칭하는 예약어.. )
+    //child 는 자신을 부모창에서 사용하는 이름... 개발자 임의 이름.. 
+    opener.child = this
+
+    function myClose(){
+      //부모창을 특정 url 로... 이동.. 
+      opener.location.href = 'http://www.naver.com'
+      window.close()
+    }
+  </script>
+</head>
+<body>
+  <h1>I am child page...</h1>
+  <button onclick="getMainData()">get main data</button>
+  <button onclick="myClose()">close</button>
+</body>
+</html>

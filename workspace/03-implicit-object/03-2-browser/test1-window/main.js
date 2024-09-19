@@ -24,7 +24,7 @@ let childWindow
 
 const myOpen3 = () => {
   childWindow = window.open(
-    'http://www.google.com',
+    'http://www.likelion.net',
     '_blank',
     'left=100,top=100,width=300,height=400'
   )
@@ -39,6 +39,6 @@ const myClose = () => {
 }
 
 function myScroll() {
-  window.scrollBy(100, 100)
+  window.scrollBy(100,100)
 }
 
