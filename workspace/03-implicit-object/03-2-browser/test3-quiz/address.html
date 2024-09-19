@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>주소</h1>
+  <input type="text" id="address"/>
+  <button onclick="addAddress()">입력</button>
+  <script>
+    function addAddress() {
+      //유저 입력 데이터 추출..
+      let address = document.getElementById('address').value
+      //필수 입력 체크...
+      if(address == null || address.trim().length == 0){
+        alert('주소를 입력해야 합니다.')
+      }else {
+        //부모의 함수를 호출하면서 주소 데이터 매개변수로 전달..
+        opener.printAddress(address)
+        window.close()
+      }
+    }
+  </script>
+</body>
+</html>
