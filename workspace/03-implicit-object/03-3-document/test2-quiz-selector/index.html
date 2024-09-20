@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>회원가입</h3>
+  <form id="myForm">
+    이름 : <input type="text" id="name"/><br/>
+    취미 : <br/>
+    <input type="checkbox" id="hobby" value="여행"/>여행
+    <input type="checkbox" id="hobby" value="요리"/>요리
+    <br/>
+    성별 : <br/>
+    <!-- radio 는 여러개중에 단일 선택.. 여러개를 동일 그룹으로 묶어야.. 
+     name 값이 동일한 것중 단일선택.-->
+    <input type="radio" name="gender" value="남성"/>남성
+    <input type="radio" name="gender" value="여성"/>여성
+    <br/>
+    <button type="submit">회원가입</button>
+    <button type="reset">취소</button>
+  </form>
+  <br/>
+  <div id="result"></div>
+  <script src="main.js"></script>
+</body>
+</html>
