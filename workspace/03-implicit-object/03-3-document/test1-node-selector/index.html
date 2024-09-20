@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>one</div>
+  <div>two</div>
+  <div id="a1">three</div>
+  <div class="b1">four</div>
+  <div id="a2">
+    <div>five</div>
+    <div class="b1">six</div>
+  </div>
+  <div>
+    <input name="address" /><br />
+    <p id="result"></p>
+  </div>
+  <p><button onclick="idTest()">id test</button></p>
+  <script>
+    function idTest() {
+      //id 속성 값으로 노드 획득.. 
+      let selectNode = document.getElementById('a1')
+      selectNode.style.backgroundColor = 'red'
+    }
+  </script>
+  <p><button onclick="tagNameTest()">tag name test</button></p>
+  <script>
+    function tagNameTest() {
+      //tag name 으로 노드 획득.. 
+      //getElementsByTagName - 걸리는 노드 모두 반환
+      //HTMLCollection
+      let selectNode = document.getElementsByTagName('div')
+      for (let i = 0; i < selectNode.length; i++) {
+        selectNode[i].style.backgroundColor = 'red'
+      }
+    }
+  </script>
+  <p><button onclick="classTest()">class test</button></p>
+  <script>
+    function classTest() {
+      let selectNode = document.getElementsByClassName('b1')
+      for (let i = 0; i < selectNode.length; i++) {
+        selectNode[i].style.backgroundColor = 'red'
+      }
+    }
+  </script>
+  <p><button onclick="nameTest()">name test</button></p>
+  <script>
+    function nameTest(){
+      //name 으로 노드 획득, 그곳에 유저가 입력한 데이터 추출
+      //result 에 출력.. 
+      let addressNode = document.getElementsByName('address')
+      let resultNode = document.getElementById('result')
+      resultNode.innerHTML = `${addressNode[0].tagName}, ${addressNode[0].value}`
+    }
+  </script>
+  <p><button onclick="selectorTest()">query select test</button></p>
+  <script>
+    function selectorTest(){
+      let selectNode = document.querySelectorAll('#a2 div')
+      for (let i = 0; i < selectNode.length; i++) {
+        selectNode[i].style.backgroundColor = 'red'
+      }
+    }
+  </script>
+</body>
+
+</html>
