@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chat.css"/>
+  </head>
+  <body>
+    <section class="msger">
+      <main class="msger-chat" id="chat-main">
+        <div id="msgId-1" class="msg left-msg">
+          <img src="images/kim.jpg" class="msg-img" />
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">김길동</div>
+              <div class="msg-info-time">2024. 9. 10. 오후 7:10:00</div>
+              <div class="dropdown">
+                <button class="msg-info-menu dropbtn">
+                  <img src="images/menu.jpg" />
+                </button>
+                <div class="dropdown-content">
+                  <a href="#" onclick="emojiClick('1','thumbup')">좋아요</a
+                  ><a href="#" onclick="emojiClick('1','ok')">넵</a>
+                </div>
+              </div>
+            </div>
+            <div class="msg-text">안녕하세요</div>
+            <div class="emojis">
+              <div class="dropdown">
+                <img class="emoji dropbtn" src="images/thumbup.jpg" />
+                <div class="dropdown-content"><span>lee,hong</span></div>
+              </div>
+              <span class="emoji-count">2</span>
+              <div class="dropdown">
+                <img class="emoji dropbtn" src="images/ok.jpg" />
+                <div class="dropdown-content"><span>park</span></div>
+              </div>
+              <span class="emoji-count">1</span>
+            </div>
+          </div>
+        </div>
+        <div id="msgId-2" class="msg left-msg">
+          <img src="images/lee.jpg" class="msg-img" />
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">이길동</div>
+              <div class="msg-info-time">2024. 9. 10. 오후 7:10:10</div>
+              <div class="dropdown">
+                <button class="msg-info-menu dropbtn">
+                  <img src="images/menu.jpg" />
+                </button>
+                <div class="dropdown-content">
+                  <a href="#" onclick="emojiClick('2','thumbup')">좋아요</a
+                  ><a href="#" onclick="emojiClick('2','ok')">넵</a>
+                </div>
+              </div>
+            </div>
+            <div class="msg-text">hello world</div>
+            <div class="emojis">
+              <div class="dropdown">
+                <img class="emoji dropbtn" src="images/thumbup.jpg" />
+                <div class="dropdown-content"><span>kim</span></div>
+              </div>
+              <span class="emoji-count">1</span>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <form class="msger-inputarea">
+        <input
+          type="text"
+          class="msger-input-nickname"
+          placeholder="id"
+          id="idInput"
+        />
+        <input
+          type="text"
+          class="msger-input-nickname"
+          placeholder="nickname"
+          id="nicknameInput"
+        />
+        <input
+          type="text"
+          class="msger-input-msg"
+          placeholder="Enter your message..."
+          id="msgInput"
+        />
+        <button class="msger-send-btn" onclick="send(event)">Send</button>
+      </form>
+    </section>
+  </body>
+</html>

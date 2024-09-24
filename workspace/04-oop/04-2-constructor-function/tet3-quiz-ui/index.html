@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="chat.css"/>
+</head>
+<body>
+  <section class="msger">
+    <main class="msger-chat" id="chat-main">
+      
+    </main>
+
+    <form class="msger-inputarea">
+      <input
+        type="text"
+        class="msger-input-nickname"
+        placeholder="id"
+        id="idInput"
+      />
+      <input
+        type="text"
+        class="msger-input-nickname"
+        placeholder="nickname"
+        id="nicknameInput"
+      />
+      <input
+        type="text"
+        class="msger-input-msg"
+        placeholder="Enter your message..."
+        id="msgInput"
+      />
+      <button class="msger-send-btn" onclick="send(event)">Send</button>
+    </form>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
