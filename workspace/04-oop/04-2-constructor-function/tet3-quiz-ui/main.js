@@ -156,10 +156,73 @@ function send(e){
 }
 
 function printEmoji(message){
+  //하나의 메시지에 이모지는 여러개 추가되었을 수도..
+  let emojis = message.emojis
+  if(emojis.length > 0){
+    //이모지가 출력되어야 하는 노드를 획득해야 한다..
+    let messageBubble = document.querySelector(`#msgId-${message.msgId} .msg-bubble`)
+    //이모지가 기존에 추가된 것이 있을 수도 있고 없을 수도 있고
+    let emojiNode = messageBubble.querySelector('.emojis')
+    if(emojiNode){
+      //기존에 이모지 추가된 것이 있는 상황.. 
+      messageBubble.removeChild(emojiNode)
+    }
+
+    let emojisNode = document.createElement('div')
+    emojisNode.setAttribute('class', 'emojis')
+
+    emojis.forEach((emoji) => {
+      let img = document.createElement('img')
+      img.setAttribute('class', 'emoji dropbtn')
+      img.setAttribute('src', `images/${emoji.emojiId}.jpg`)
+
+      let span = document.createElement('span')
+      let nicknameTxt = emoji.members.join(',')
+      span.appendChild(document.createTextNode(nicknameTxt))
+
+      let dropdownContent = document.createElement('div')
+      dropdownContent.setAttribute('class', 'dropdown-content')
+      dropdownContent.appendChild(span)
+
+      let dropdown = document.createElement('div')
+      dropdown.setAttribute('class', 'dropdown')
+      dropdown.appendChild(img)
+      dropdown.appendChild(dropdownContent)
+
+      let span2 = document.createElement('span')
+      span2.setAttribute('class', 'emoji-count')
+      span2.appendChild(document.createTextNode(`${emoji.count}`))
+
+      emojisNode.appendChild(dropdown)
+      emojisNode.appendChild(span2)
+    })
+
+    messageBubble.appendChild(emojisNode)
+  } 
 
 }
 
 //이모지 추가 클릭 이벤트 처리...
-function emojiClick(){
+function emojiClick(msgId, emojiId){
   //동적으로 이모지를 메시지에 출력..
+
+  //서버와 연동된다면 이모지 출력 유저의 id 는 고정되지만..
+  //지금은 로컬 테스트임으로 
+  //이모지 추가 유저 id 를 테스트를 위해서 prompt 로 받아들인다..
+  let memberId = prompt('멤버 id 를 입력해 주세요')
+  if(memberId == null){
+    alert('입력을 하지 않았습니다.')
+  }else {
+    //화면에 메시지는 많다.. 모든 메시지의 이모지 추가 클릭하면..
+    //이 함수가 호출된다..
+    //결국 어느 메시지에서 이모지를 클릭한 것인지가 식별되어야 해서
+    //html 을 준비할때 매개변수로.. msgId 를 받아들인 것이다.
+
+    //msgId 로 배열에서 이모지를 추가하고자 하는 메시지 객체를 획득
+    let index = messages.findIndex((item) => item.msgId == msgId)
+    messages[index].addEmoji(emojiId, memberId)
+
+    //해당 메시지에 이모지 추가, 화면 출력.. 
+    printEmoji(messages[index])
+  }
 }
