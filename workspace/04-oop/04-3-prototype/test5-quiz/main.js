@@ -38,3 +38,7 @@ console.log("highschool sum", high1.sum());//highschool sum 185
 console.log("highschool avg", high1.avg());//highschool avg 93
 console.log("highschool grade", high1.grade())//highschool grade A
 
+console.dir(high1)
+//this - kor, eng
+//prototype - avg, sum , grade
+
