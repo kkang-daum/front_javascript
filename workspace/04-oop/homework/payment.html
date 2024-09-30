@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>결제창</h3>
+  <p><span id="price"></span> 원을 결제하겠습니다.</p>
+  <p>신용카드 번호를 입력하고 결제 버튼을 눌러 주세요</p>
+  <input type="text" id="cardNo"/>
+  <br/>
+  <button onclick="sendPG()">결제</button>
+  <script>
+    //opener 에서 데이터 가져와서 화면 출력.. 
+    let totalPrice = opener.getTotalPrice()
+    document.getElementById('price').innerHTML = totalPrice
+
+    function sendPG(){
+      //PG사 연결에 의해 결제 성공했다고 가정..
+      //opener에게 알려주고.. 
+      opener.paymentSuccess(document.getElementById('cardNo').value)
+      //창 닫고.. 
+      window.close()
+    }
+  </script>
+</body>
+</html>

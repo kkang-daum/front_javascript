@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>참치회 특가 판매</h3>
+  <!-- html 태그에서 onxxx 로 이벤트 핸들러를 호출할때
+   그 함수에 event 객체가 전달되어야 한다면.. event 라는 이름의 
+   객체로..  -->
+  <select id="products" multiple onchange="selectChange(event)">
+
+  </select>
+  <div id="result"></div>
+  <button onclick="payment()">결제하기</button>
+  <script src="main.js"></script>
+</body>
+</html>
