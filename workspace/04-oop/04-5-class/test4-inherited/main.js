@@ -137,5 +137,6 @@ class Rect2 extends Shape2 {
   }
 }
 let rect3 = new Rect2('사각형', 10, 10, 20, 20)
-console.log(rect3.data)
-rect3.calcArea()
+console.log(rect3.data)//20
+rect3.calcArea()//사각형의 면적을 계산합니다.
+//넓이는 400
