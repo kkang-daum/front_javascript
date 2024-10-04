@@ -107,8 +107,9 @@ async function myFun9(){
   //all()  을 이용할 수도...
   //배열에 건 함수를 동시에 실행시키면서 모두 다 데이터가 획득된경우 callback 호출
   Promise.all([funA(), funB()]).then((value) => {
-    console.log(value)
-    console.timeEnd()
+    console.log(value)//['funA data', 'funB data']
+    console.timeEnd()//default: 2010.992919921875 ms
   })
+  
 }
 myFun9()
