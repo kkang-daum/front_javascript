@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="main.js"></script>
+</head>
+<body>
+  <h2>Index page</h2>
+  key <input type="text" id="key"/><br/>
+  value <input type="text" id="value"/><br/>
+  <button onclick="saveSessionStorage()">save session</button>
+  <br/>
+  <button onclick="saveLocalStorage()">save local</button>
+  <br/>
+  <a href="one.html" target="_blank">go one page</a>
+  <br/>
+  <button onclick="openNewWindow()">open new window</button>
+  <br/>
+  <iframe src="two.html" width="300px" height="200px">
+    <p>사용중인 브라우저는 iframe 을 지원하지 않습니다.</p>
+  </iframe>
+</body>
+</html>
