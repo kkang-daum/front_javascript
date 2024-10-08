@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="loginForm">
+    ID <input type="text" id="idInput"/><br/>
+    PW <input type="password" id="pwInput"/><br/>
+    <button onclick="login()">login</button>
+  </div>
+  <div id="loginOk" class="hide">
+    <span id="id"></span>로 로그인 되었습니다.
+    <button onclick="logout()">logout</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div id="connectDiv">
+    <input type="text" id="nickname"/>
+    <button onclick="connection()">connection</button>
+  </div>
+  <div style="display: none;" id="msgDiv">
+    <p>
+      <span id="nicknameResult"></span>으로 메시지가 전송됩니다.
+    </p>
+    <input type="text" id="msg"/>
+    <button onclick="send()">send</button>
+  </div>
+  <ul id="results"></ul>
+</body>
+</html>
