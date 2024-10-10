@@ -1,0 +1,25 @@
+//npm - node.js 의 명령어.. package 관리 툴.. 
+//package 설치, 삭제, 업데이트..
+
+//npm 환경파일.. package.json
+
+//npm 으로 관리되는 프로젝트 초기화.. 자동으로 package.json(npm 환경파일 - 프로젝트 설정파일) 이 하나 만들어 진다..
+>npm init
+
+
+//필요한 lib(package) 혹은 tool 다운로드.. 
+//npm install xxx - npm repository server 로 부터 xxx 패키지를 
+//다운로드 받는 명령어.. 
+//-D 옵션을 주면 tool
+//package.json 에 자동 기록된다..
+>npm install -D typescript 
+
+//tsconfig.json(ts 환경파일) 준비.. 
+>npx tsc -init 
+
+
+//tsc 의 설정 내용을 tsconfig.json 에 기록.... 
+
+
+//tsc 로 .. transpile... 
+>npx tsc
