@@ -1,0 +1,6 @@
+//nodejs 에 의해 실행되는 file upload 기능이 구현된
+//서버...
+//file upload 는 multer 라는 package 이용..
+
+>npm install
+>node main.js
